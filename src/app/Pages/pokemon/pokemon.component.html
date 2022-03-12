@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>Pokemons</h1>
+    </div>
+    <div class="col-md-3" style="margin-bottom: 2px;" *ngFor="let item of Response.results">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <a class="card-link" routerLink = "/PokemonDetail/{{item.name}}">Ver Detalle</a>
+            </div>
+          </div>
+    </div>
+</div>

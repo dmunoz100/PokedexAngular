@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="row">
+        <div class="col-12  ">
+                <button routerLink="" class="btn btn-primary">Back</button>
+        </div>  
+        <br/>
+        <br/>
+        <div class="col-2  ">
+            <a (click)="Previuspokemon()"  class="btn btn-primary">Anterior</a>
+        </div> 
+        <div class="col-8  ">
+        
+        </div> 
+        <div class="col-2  ">
+            <a (click)="nextpokemon()" class="btn btn-primary">Siguiente</a>
+        </div> 
+    <div class="col-12 text-center ">
+        <img width="400" height="400" [src]="Pokemon.sprites.other.home.front_default">
+    </div>
+    <div class="col-12 ">
+        <h1>#{{Pokemon.id}}-{{Pokemon.species.name}}</h1>
+        <h5>Peso: {{Pokemon.weight}}</h5>
+    </div>
+    <div class="col-6">
+       <h2>Tipo</h2> 
+    </div>
+    <div class="col-6">
+        <h2>Habilidades</h2>
+    </div>
+    <div class="col-6">
+        <ul class="list-group card">
+            <li *ngFor="let item of Pokemon.types" class="list-group-item card">
+                <b>{{item.type.name}}</b>
+                <button routerLink="/TypeDetail/{{item.type.name}}" style="float: right;" class="btn btn-primary">Detalle</button>
+            </li>
+          </ul>
+     </div>
+     <div class="col-6">
+        <ul class="list-group card">
+            <li *ngFor="let item of Pokemon.abilities" class="list-group-item card">
+                <b>{{item.ability.name}}</b>  
+                <button routerLink="/AbilityDetail/{{item.ability.name}}"  style="float: right;" class="btn btn-primary">Detalle</button>
+            </li>
+          </ul>
+     </div>
+     <div class="col-12">
+        <h2>Apariciones</h2> 
+     </div>
+     <div class="col-12">
+        <ul class="list-group card">
+            <li *ngFor="let item of Pokemon.game_indices" class="list-group-item card"><b>{{item.version.name}}</b></li>
+          </ul>
+     </div>
+     <div class="col-12">
+        <h2>Movimientos</h2> 
+     </div>
+     <div class="col-12">
+        <ul class="list-group card">
+            <li *ngFor="let item of Pokemon.moves" class="list-group-item card"><b>{{item.move.name}}</b></li>
+          </ul>
+     </div>
+</div>
+</div>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("https://besthqwallpapers.com//Uploads/7-3-2021/159659/pokeball-4k-space-minimal-pokemon-lets-go.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    color: white !important;
+}
+
+h1 , h2 , h3 , h4 ,a {
+    color: white !important;
+}
+
+.card{
+    background-color: #ffffff59!important;
+}
+
+
+
+

@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="row">
+        <div class="col-12  ">
+                <h1>Habilidad: {{PokemonAbility.name}}</h1>
+        </div>
+        <div class="col-12" *ngFor="let item of PokemonAbility.effect_entries ">
+            {{item.effect}}
+        </div>
+        <div class="col-12"><h2>Pokemones con esta Habilidad</h2></div>
+        <div class="col-12">
+            <ul class="list-group card">
+                <li *ngFor="let item of PokemonAbility.pokemon" class="list-group-item card">
+                    <b>{{item.pokemon.name}}</b>
+                    <button routerLink="/PokemonDetail/{{item.pokemon.name}}" style="float: right;" class="btn btn-primary">Detalle</button>
+                </li>
+              </ul>
+        </div>
+    </div>
+</div>

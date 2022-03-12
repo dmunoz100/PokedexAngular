@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="row">
+        <div class="col-12  ">
+            <h1>Typo : {{PokemonType.name}}</h1>
+        </div>
+        <div class="col-6"><h2>Movimientos</h2></div>
+        <div class="col-6"><h2>Generacion</h2></div>
+        <div class="col-6">
+            <ul class="list-group card">
+                <li *ngFor="let item of PokemonType.moves" class="list-group-item card">
+                    <b>{{item.name}}</b>
+                </li>
+              </ul>
+        </div>
+        <div class="col-6">
+            <ul class="list-group card">
+                <li *ngFor="let item of PokemonType.game_indices" class="list-group-item card">
+                    <b>{{item.generation.name}}</b>
+                </li>
+              </ul>
+        </div>
+        <div class="col-12"><h2>Pokemones de este tipo</h2></div>
+        <div class="col-12">
+            <ul class="list-group card">
+                <li *ngFor="let item of PokemonType.pokemon" class="list-group-item card">
+                    <b>{{item.pokemon.name}}</b>
+                    <button routerLink="/PokemonDetail/{{item.pokemon.name}}" style="float: right;" class="btn btn-primary">Detalle</button>
+                </li>
+              </ul>
+        </div>
+
+
+    </div> 
+</div>
